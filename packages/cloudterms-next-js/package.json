@@ -1,0 +1,50 @@
+{
+  "name": "@cloudterms/nextjs",
+  "module": "./dist/es/index.js",
+  "type": "module",
+  "private": false,
+  "version": "0.0.2",
+  "scripts": {
+    "build": "bunchee",
+    "check.all": "bun run check.types && bun run check.fmt && bun run check.lint",
+    "check.all.fix": "bun run check.types && bun run check.fmt.fix && bun run check.lint.fix",
+    "check.fmt": "biome format ./src",
+    "check.fmt.fix": "biome format --write ./src",
+    "check.lint": "biome lint ./src",
+    "check.lint.fix": "biome check --apply ./src",
+    "check.types": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@cloudterms/js": "^0.0.2"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.7.1",
+    "@types/bun": "latest",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "bunchee": "^5.1.2"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0",
+    "react": "^18",
+    "react-dom": "^18",
+    "next": "14.2.3"
+  },
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/es/index.js",
+  "types": "./dist/es/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/es/index.d.ts",
+        "default": "./dist/es/index.js"
+      },
+      "require": {
+        "types": "./dist/cjs/index.d.cts",
+        "default": "./dist/cjs/index.cjs"
+      }
+    }
+  }
+}

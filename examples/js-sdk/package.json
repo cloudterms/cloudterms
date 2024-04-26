@@ -1,0 +1,14 @@
+{
+  "name": "@cloudterms-example/js-sdk",
+  "module": "index.ts",
+  "type": "module",
+  "dependencies": {
+    "@cloudterms/js": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  }
+}

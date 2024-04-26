@@ -1,0 +1,73 @@
+{
+  "name": "@cloudterms/js",
+  "module": "./dist/es/index.js",
+  "type": "module",
+  "private": false,
+  "version": "0.0.2",
+  "scripts": {
+    "build": "bunchee",
+    "check.all": "bun run check.types && bun run check.fmt && bun run check.lint",
+    "check.all.fix": "bun run check.types && bun run check.fmt.fix && bun run check.lint.fix",
+    "check.fmt": "biome format ./src",
+    "check.fmt.fix": "biome format --write ./src",
+    "check.lint": "biome lint ./src",
+    "check.lint.fix": "biome check --apply ./src",
+    "check.types": "tsc --noEmit",
+    "publish": "npm publish --access public"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.7.1",
+    "@types/bun": "latest",
+    "bunchee": "^5.1.2"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/es/index.js",
+  "types": "./dist/es/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/es/index.d.ts",
+        "default": "./dist/es/index.js"
+      },
+      "require": {
+        "types": "./dist/cjs/index.d.cts",
+        "default": "./dist/cjs/index.cjs"
+      }
+    },
+    "./requests": {
+      "import": {
+        "types": "./dist/es/requests.d.ts",
+        "default": "./dist/es/requests.js"
+      },
+      "require": {
+        "types": "./dist/cjs/requests.d.cts",
+        "default": "./dist/cjs/requests.cjs"
+      }
+    },
+    "./types": {
+      "import": {
+        "types": "./dist/es/types.d.ts",
+        "default": "./dist/es/types.js"
+      },
+      "require": {
+        "types": "./dist/cjs/types.d.cts",
+        "default": "./dist/cjs/types.cjs"
+      }
+    },
+    "./utils": {
+      "import": {
+        "types": "./dist/es/utils.d.ts",
+        "default": "./dist/es/utils.js"
+      },
+      "require": {
+        "types": "./dist/cjs/utils.d.cts",
+        "default": "./dist/cjs/utils.cjs"
+      }
+    }
+  }
+}

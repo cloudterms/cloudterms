@@ -1,0 +1,8 @@
+{
+  "name": "cloudterms",
+  "private": true,
+  "workspaces": [
+    "packages/*",
+    "examples/*"
+  ]
+}
