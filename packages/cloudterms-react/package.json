@@ -1,23 +1,25 @@
 {
-  "name": "@cloudterms/nextjs",
+  "name": "@cloudterms/react",
   "module": "./dist/es/index.js",
   "type": "module",
-  "private": false,
-  "version": "0.0.2",
   "scripts": {
     "build": "bunchee",
     "publish": "npm publish --access public"
   },
   "dependencies": {
-    "@cloudterms/react": "workspace:*"
+    "@cloudterms/js": "0.0.2",
+    "react-html-parser": "^2.0.2"
   },
   "devDependencies": {
     "@types/bun": "latest",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
     "bunchee": "^5.1.2"
   },
   "peerDependencies": {
     "typescript": "^5.0.0",
-    "next": "14.2.3"
+    "react": "^18",
+    "react-dom": "^18"
   },
   "files": [
     "dist"
