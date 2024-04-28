@@ -1,5 +1,8 @@
-import ReactHtmlParser from "react-html-parser";
+import "./agreement-renderer.css";
 
-export const AgreementRenderer = ({ agreement }: { agreement: string }) => {
-  return <div>{ReactHtmlParser(agreement)}</div>;
-};
+export const AgreementRenderer = ({ agreement }: { agreement: string }) => (
+  <div
+    id="agreement-renderer"
+    dangerouslySetInnerHTML={{ __html: agreement }}
+  />
+);
