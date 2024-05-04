@@ -1,2 +1,2 @@
-export * from "@cloudterms/js";
-export * from "./provider";
+export * from '@cloudterms/js'
+export * from './provider'

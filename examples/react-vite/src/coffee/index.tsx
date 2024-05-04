@@ -1,10 +1,10 @@
-import "./coffee.css";
+import './coffee.css'
 
 export const Coffee = () => (
   <div
     style={{
-      display: "flex",
-      flexDirection: "column",
+      display: 'flex',
+      flexDirection: 'column',
     }}
   >
     <div>
@@ -29,9 +29,9 @@ export const Coffee = () => (
       </div>
     </div>
 
-    <div style={{ marginTop: "280px" }}>
-      Coffee credit goes to{" "}
+    <div style={{ marginTop: '280px' }}>
+      Coffee credit goes to{' '}
       <a href="https://codepen.io/hjdesigner">Henrique Rodrigues</a>
     </div>
   </div>
-);
+)

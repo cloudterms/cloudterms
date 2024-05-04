@@ -3,6 +3,6 @@
  */
 export const useUser = () => {
   return {
-    userId: "my-user-id",
-  };
-};
+    userId: 'my-user-id',
+  }
+}

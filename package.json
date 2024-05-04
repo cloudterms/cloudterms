@@ -1,18 +1,32 @@
 {
   "name": "cloudterms",
   "type": "module",
-  "private": true,
   "workspaces": [
     "packages/*",
     "examples/*"
   ],
   "scripts": {
     "build.all": "bun scripts/build-all.ts",
-    "publish.all": "bun scripts/publish-all.ts",
-    "start.react-vite": "cd examples/react-vite && bun dev"
+    "check.all": "bun run check.types && bun run check.fmt && bun run check.lint",
+    "check.all.fix": "bun run check.types && bun run check.fmt.fix && bun run check.lint.fix",
+    "check.circular-deps": "madge --circular --extensions ts,tsx .",
+    "check.fmt": "prettier --check .",
+    "check.fmt.fix": "prettier --write .",
+    "check.lint": "eslint \"./**/*.ts*\" ",
+    "check.lint.fix": "eslint \"./**/*.ts*\" --fix",
+    "check.types": "tsc --noEmit",
+    "publish.all": "bun scripts/publish-all.ts"
   },
   "devDependencies": {
-    "@types/bun": "latest"
+    "@ianvs/prettier-plugin-sort-imports": "4.2.1",
+    "@types/bun": "latest",
+    "@types/eslint": "8.56.10",
+    "@typescript-eslint/eslint-plugin": "7.8.0",
+    "@typescript-eslint/parser": "7.8.0",
+    "eslint": "8.57.0",
+    "eslint-config-next": "14.2.3",
+    "madge": "7.0.0",
+    "prettier": "3.2.5"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"

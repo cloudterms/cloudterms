@@ -1,26 +1,22 @@
-import React from "react";
+import React from 'react'
+import type { Terms } from '@cloudterms/js'
 
-import CloudTerms from "@cloudterms/js";
-import { TermsModal } from "./terms-modal";
+import { TermsModal } from './terms-modal'
 
-export type Terms = Awaited<
-  ReturnType<ReturnType<typeof CloudTerms>["terms"]["get"]>
->;
-
-export const CloudTermsProvider = ({
+export const CloudTermsClientProvider = ({
   children,
-  userId,
+  // userId,
   terms,
   hasAgreed,
   onAgree,
 }: {
-  children: React.ReactNode;
-  userId?: string;
-  terms?: Terms;
-  hasAgreed?: boolean;
-  onAgree: () => void;
+  children: React.ReactNode
+  userId?: string
+  terms?: Terms
+  hasAgreed?: boolean
+  onAgree: () => void
 }) => {
-  if (hasAgreed || !terms) return children;
+  if (hasAgreed === true || !terms) return children
 
   return (
     <>
@@ -32,5 +28,5 @@ export const CloudTermsProvider = ({
       />
       {children}
     </>
-  );
-};
+  )
+}

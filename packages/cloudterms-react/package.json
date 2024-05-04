@@ -3,9 +3,7 @@
   "module": "./dist/es/index.js",
   "type": "module",
   "scripts": {
-    "build": "bun run build.css && bun run build.js",
-    "build.css": "tailwindcss -i ./src/styles.css -o ./dist/index.css --minify",
-    "build.js": "bunchee",
+    "build": "bunchee",
     "publish": "npm publish --access public"
   },
   "dependencies": {

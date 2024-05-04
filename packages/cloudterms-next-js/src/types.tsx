@@ -1,5 +1,5 @@
-import CloudTerms from "@cloudterms/js";
+import type CloudTerms from '@cloudterms/js'
 
 export type Terms = Awaited<
-  ReturnType<ReturnType<typeof CloudTerms>["terms"]["get"]>
->;
+  ReturnType<ReturnType<typeof CloudTerms>['terms']['get']>
+>
