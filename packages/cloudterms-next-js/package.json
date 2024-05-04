@@ -3,13 +3,13 @@
   "module": "./dist/es/index.js",
   "type": "module",
   "private": false,
-  "version": "0.0.2",
+  "version": "0.0.3",
   "scripts": {
     "build": "bunchee",
     "publish": "npm publish --access public"
   },
   "dependencies": {
-    "@cloudterms/react": "workspace:*"
+    "@cloudterms/react": "0.0.1"
   },
   "devDependencies": {
     "@types/bun": "latest",

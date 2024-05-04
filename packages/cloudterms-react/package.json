@@ -2,7 +2,7 @@
   "name": "@cloudterms/react",
   "module": "./dist/es/index.js",
   "type": "module",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "scripts": {
     "build": "bunchee",
     "publish": "npm publish --access public"
