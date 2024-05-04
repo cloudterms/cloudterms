@@ -9,7 +9,7 @@
     "publish": "npm publish --access public"
   },
   "dependencies": {
-    "@cloudterms/js": "^0.0.2"
+    "@cloudterms/js": "0.0.2"
   },
   "devDependencies": {
     "@types/bun": "latest",

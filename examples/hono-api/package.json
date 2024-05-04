@@ -1,9 +1,11 @@
 {
+  "name": "@cloudterms/hono-api-example",
+  "type": "module",
   "scripts": {
     "dev": "PORT=3002 bun run --hot src/index.ts"
   },
   "dependencies": {
-    "@cloudterms/js": "0.0.2",
+    "@cloudterms/js": "workspace:*",
     "hono": "4.3.1"
   },
   "devDependencies": {
