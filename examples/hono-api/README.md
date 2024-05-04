@@ -1,4 +1,4 @@
-# Hono API
+# CloudTerms + Hono + TypeScript
 
 1. Install dependencies
 
@@ -19,4 +19,4 @@ CLOUDTERMS_APP_SECRET="sk_live.xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 bun run dev
 ```
 
-4. open http://localhost:3002
+4. Open http://localhost:3002
