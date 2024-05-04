@@ -3,10 +3,9 @@
   "module": "./dist/es/index.js",
   "type": "module",
   "private": false,
-  "version": "0.0.3",
+  "version": "0.0.5",
   "scripts": {
-    "build": "bunchee",
-    "publish": "npm publish --access public"
+    "build": "bunchee"
   },
   "devDependencies": {
     "@types/bun": "latest",

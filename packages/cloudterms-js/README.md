@@ -1,1 +1,1 @@
-# cloudterms-js
+# CloudTerms JS SDK
