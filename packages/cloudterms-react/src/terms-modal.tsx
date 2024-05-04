@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 import type { Terms } from "./provider";
-import "./styles.css";
+import { HTMLRenderer } from "./html-renderer";
 
 export const TermsModal = ({
   isOpen,
@@ -24,7 +24,14 @@ export const TermsModal = ({
 
   return (
     <dialog ref={ref} {...props}>
-      <h2 className="text-blue-700">Application agreements</h2>
+      <h2>Application agreements</h2>
+      {terms.map((term) => {
+        return (
+          <div key={term.termId}>
+            <HTMLRenderer termContent={term.content} />
+          </div>
+        );
+      })}
       <button onClick={onAgree}>agree</button>
     </dialog>
   );
