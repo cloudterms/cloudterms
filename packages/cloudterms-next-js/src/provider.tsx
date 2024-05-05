@@ -1,5 +1,5 @@
 import React from 'react'
-import CloudTerms from '@cloudterms/js'
+import { CloudTerms } from '@cloudterms/js'
 import { CloudTermsClientProvider } from '@cloudterms/react'
 
 export const CloudTermsProvider = async ({

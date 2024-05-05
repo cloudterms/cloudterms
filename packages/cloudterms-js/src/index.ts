@@ -2,7 +2,7 @@ import { termsGet, userHasAgreed, userSetAgreed } from './requests'
 import type { CloudTermsConfig, UserId } from './types'
 import { getConfig } from './utils'
 
-export default function CloudTerms(config: CloudTermsConfig = {}) {
+function CloudTerms(config: CloudTermsConfig = {}) {
   const _config = getConfig(config)
 
   return {
@@ -17,3 +17,4 @@ export default function CloudTerms(config: CloudTermsConfig = {}) {
 }
 
 export type { AgreedRes, Term, Terms } from './types'
+export { CloudTerms }

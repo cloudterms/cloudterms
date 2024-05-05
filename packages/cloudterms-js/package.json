@@ -3,7 +3,7 @@
   "module": "./dist/es/index.js",
   "type": "module",
   "private": false,
-  "version": "0.0.8",
+  "version": "0.0.10",
   "scripts": {
     "build": "bunchee"
   },
@@ -28,16 +28,6 @@
       "require": {
         "types": "./dist/cjs/index.d.cts",
         "default": "./dist/cjs/index.cjs"
-      }
-    },
-    "./requests": {
-      "import": {
-        "types": "./dist/es/requests.d.ts",
-        "default": "./dist/es/requests.js"
-      },
-      "require": {
-        "types": "./dist/cjs/requests.d.cts",
-        "default": "./dist/cjs/requests.cjs"
       }
     },
     "./types": {

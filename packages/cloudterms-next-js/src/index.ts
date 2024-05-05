@@ -1,2 +1,3 @@
-export * from '@cloudterms/js'
+export * from '@cloudterms/react'
+
 export * from './provider'

@@ -1,4 +1,4 @@
-import CloudTerms from '@cloudterms/js'
+import { CloudTerms } from '@cloudterms/js'
 
 const cloudterms = CloudTerms()
 const terms = await cloudterms.terms.get()

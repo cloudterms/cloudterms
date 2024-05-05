@@ -1,4 +1,4 @@
-import CloudTerms from '@cloudterms/js'
+import { CloudTerms } from '@cloudterms/js'
 import { Hono } from 'hono'
 import { cors } from 'hono/cors'
 
