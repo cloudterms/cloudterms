@@ -2,12 +2,12 @@
   "name": "@cloudterms/react",
   "module": "./dist/es/index.js",
   "type": "module",
-  "version": "0.0.5",
+  "version": "0.0.8",
   "scripts": {
     "build": "bunchee"
   },
   "dependencies": {
-    "@cloudterms/js": "0.0.3"
+    "@cloudterms/js": "0.0.8"
   },
   "devDependencies": {
     "@types/bun": "latest",
