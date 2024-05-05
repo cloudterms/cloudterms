@@ -8,7 +8,7 @@
     "build": "bunchee"
   },
   "dependencies": {
-    "@cloudterms/react": "^0.0.12"
+    "@cloudterms/react": "workspace:*"
   },
   "devDependencies": {
     "@types/bun": "latest",
@@ -32,6 +32,16 @@
       "require": {
         "types": "./dist/cjs/index.d.cts",
         "default": "./dist/cjs/index.cjs"
+      }
+    },
+    "./client": {
+      "import": {
+        "types": "./dist/es/client.d.ts",
+        "default": "./dist/es/client.js"
+      },
+      "require": {
+        "types": "./dist/cjs/client.d.cts",
+        "default": "./dist/cjs/client.cjs"
       }
     },
     "./server": {

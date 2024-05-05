@@ -32,6 +32,7 @@ export const CloudTermsHandler = () => {
     },
 
     POST: async (_req: NextRequest, { params }: Context) => {
+      console.log('params.cloudterms', params.cloudterms)
       if (
         params.cloudterms[0] === 'users' &&
         params.cloudterms[2] === 'agree'

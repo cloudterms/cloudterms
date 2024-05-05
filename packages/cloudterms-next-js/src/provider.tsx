@@ -1,6 +1,7 @@
 import React from 'react'
-import { CloudTerms } from '@cloudterms/js'
-import { CloudTermsClientProvider } from '@cloudterms/react'
+import { CloudTerms } from '@cloudterms/react/server'
+
+import { CloudTermsNextClientProvider } from './client/provider'
 
 export const CloudTermsProvider = async ({
   children,
@@ -11,22 +12,20 @@ export const CloudTermsProvider = async ({
 }) => {
   const cloudterms = CloudTerms()
   const terms = await cloudterms.terms.get()
+
   const hasAgreed = await (userId
     ? cloudterms.user.hasAgreed(userId)
     : Promise.resolve(false))
 
-  const onAgree = () => {
-    console.log('agreeing...')
-  }
-
+  console.log('userId', userId)
+  console.log('hasAgreed', hasAgreed)
   return (
-    <CloudTermsClientProvider
+    <CloudTermsNextClientProvider
       userId={userId}
       terms={terms}
       hasAgreed={hasAgreed}
-      onAgree={onAgree}
     >
       {children}
-    </CloudTermsClientProvider>
+    </CloudTermsNextClientProvider>
   )
 }
