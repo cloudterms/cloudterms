@@ -1,5 +1,7 @@
 import './globals.css'
 
+import { CloudTermsProvider } from '@cloudterms/nextjs'
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -7,7 +9,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <CloudTermsProvider userId="next-app-user-id">
+          {children}
+        </CloudTermsProvider>
+      </body>
     </html>
   )
 }

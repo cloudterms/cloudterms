@@ -20,7 +20,7 @@ function App() {
       .then((data: { terms: Terms }) => setTerms(data.terms))
       .catch(err => console.error('Failed to fetch terms', err))
 
-    fetch(`${API_BASE_URL}/user/${userId}/has-agreed`)
+    fetch(`${API_BASE_URL}/users/${userId}/has-agreed`)
       .then(res => res.json())
       .then((data: { hasAgreed: boolean }) => setHasAgreed(data.hasAgreed))
       .catch(err => console.error('Failed to fetch agreed status', err))
@@ -29,10 +29,14 @@ function App() {
   /*
    * Update the user agreement status when the user agrees.
    */
-  const onAgree = () => {
-    fetch(`${API_BASE_URL}/user/${userId}/agree`, { method: 'POST' })
-      .then(() => setHasAgreed(true))
-      .catch(err => console.error('Failed to agree', err))
+  const onAgree = async () => {
+    try {
+      await fetch(`${API_BASE_URL}/users/${userId}/agree`, { method: 'POST' })
+      return true
+    } catch (error) {
+      console.error('Failed to agree', error)
+      return false
+    }
   }
 
   return (

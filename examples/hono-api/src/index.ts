@@ -15,13 +15,13 @@ app.get('/terms', async c => {
 })
 
 // Route to check if a user has agreed to your terms
-app.get('/user/:userId/has-agreed', async c => {
+app.get('/users/:userId/has-agreed', async c => {
   const hasAgreed = await cloudterms.user.hasAgreed(c.req.param('userId'))
   return c.json({ hasAgreed })
 })
 
 // Route to set a user as agreed to your terms
-app.post('/user/:userId/agree', async c => {
+app.post('/users/:userId/agree', async c => {
   const setAgreed = await cloudterms.user.setAgreed(c.req.param('userId'))
   return c.json({ setAgreed })
 })
