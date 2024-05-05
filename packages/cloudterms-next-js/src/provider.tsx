@@ -17,8 +17,6 @@ export const CloudTermsProvider = async ({
     ? cloudterms.user.hasAgreed(userId)
     : Promise.resolve(false))
 
-  console.log('userId', userId)
-  console.log('hasAgreed', hasAgreed)
   return (
     <CloudTermsNextClientProvider
       userId={userId}
