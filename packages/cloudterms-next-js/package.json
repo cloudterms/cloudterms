@@ -8,7 +8,7 @@
     "build": "bunchee"
   },
   "dependencies": {
-    "@cloudterms/react": "^0.0.1"
+    "@cloudterms/react": "^0.0.8"
   },
   "devDependencies": {
     "@types/bun": "latest",

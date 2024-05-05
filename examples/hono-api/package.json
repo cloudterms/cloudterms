@@ -5,7 +5,7 @@
     "dev": "PORT=3002 bun run --hot src/index.ts"
   },
   "dependencies": {
-    "@cloudterms/js": "^0.0.5",
+    "@cloudterms/js": "^0.0.8",
     "hono": "4.3.1"
   },
   "devDependencies": {
