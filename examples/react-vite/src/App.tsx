@@ -13,6 +13,7 @@ function App() {
 
   /*
    * Fetch terms and user agreement status from the API.
+   * Note: This is just an example. In a real-world application, use something like React Query or SWR.
    */
   useEffect(() => {
     fetch(`${API_BASE_URL}/terms`)

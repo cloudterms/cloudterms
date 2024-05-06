@@ -1,7 +1,7 @@
 import React from 'react'
 import type { Terms } from '@cloudterms/js'
 
-import { TermsModal } from './terms-modal'
+import { TermsDialog } from './terms-dialog'
 
 export const CloudTermsClientProvider = ({
   children,
@@ -21,7 +21,7 @@ export const CloudTermsClientProvider = ({
 
   return (
     <>
-      <TermsModal
+      <TermsDialog
         className="relative z-10"
         onAgree={() => {
           onAgree()

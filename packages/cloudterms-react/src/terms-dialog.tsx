@@ -1,9 +1,10 @@
 import { useEffect, useRef } from 'react'
 import type { Terms } from '@cloudterms/js'
 
+import { Button } from './components/ui/button'
 import { HTMLRenderer } from './html-renderer'
 
-export const TermsModal = ({
+export const TermsDialog = ({
   isOpen,
   terms,
   onAgree,
@@ -24,16 +25,16 @@ export const TermsModal = ({
   }, [isOpen])
 
   return (
-    <dialog ref={ref} {...props}>
+    <dialog className="bg-red-500" ref={ref} {...props}>
       <h2>Application agreements</h2>
       {terms.map(term => {
         return (
           <div key={term.termId}>
-            <HTMLRenderer termContent={term.content} />
+            <HTMLRenderer termContent={term.name} />
           </div>
         )
       })}
-      <button onClick={onAgree}>agree</button>
+      <Button onClick={onAgree}>agree</Button>
     </dialog>
   )
 }
