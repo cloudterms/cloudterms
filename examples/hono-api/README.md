@@ -3,7 +3,7 @@
 1. Install dependencies
 
 ```sh
-bun install
+pnpm install
 ```
 
 2. Add your cloudterms environment variables to your `.env`:
@@ -16,7 +16,7 @@ CLOUDTERMS_APP_SECRET="sk_live.xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 3. Run app
 
 ```sh
-bun run dev
+pnpm dev
 ```
 
 4. Open http://localhost:3002

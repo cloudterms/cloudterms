@@ -6,10 +6,11 @@
   "scripts": {
     "build.css": "tailwindcss -i ./src/styles.css -o ./dist/index.css --minify",
     "build.js": "bunchee",
-    "build": "rm -rf ./dist && bun run build.js && bun run build.css"
+    "build": "pnpm build.js && pnpm build.css",
+    "clean": "rm -rf ./dist ./node_modules ./.turbo && pnpm install"
   },
   "dependencies": {
-    "@cloudterms/js": "^0.0.10",
+    "@cloudterms/js": "workspace:*",
     "@radix-ui/react-slot": "1.0.2",
     "class-variance-authority": "0.7.0",
     "clsx": "2.1.1",
@@ -18,7 +19,7 @@
     "tailwindcss-animate": "1.0.7"
   },
   "devDependencies": {
-    "@types/bun": "latest",
+    "@types/node": "latest",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "bunchee": "5.1.2",

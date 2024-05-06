@@ -2,11 +2,15 @@
   "name": "@cloudterms/js-sdk-example",
   "module": "index.ts",
   "type": "module",
+  "scripts": {
+    "clean": "rm -rf ./node_modules",
+    "start": "tsx index.ts"
+  },
   "dependencies": {
-    "@cloudterms/js": "^0.0.10"
+    "@cloudterms/js": "workspace:*"
   },
   "devDependencies": {
-    "@types/bun": "latest"
+    "@types/node": "latest"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"

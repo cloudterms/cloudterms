@@ -3,7 +3,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build.app": "tsc && vite build",
+    "clean": "rm -rf ./dist ./node_modules ./.turbo",
     "preview": "vite preview"
   },
   "dependencies": {

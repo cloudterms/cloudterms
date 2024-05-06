@@ -5,10 +5,11 @@
   "private": false,
   "version": "0.0.10",
   "scripts": {
-    "build": "bunchee"
+    "build": "bunchee",
+    "clean": "rm -rf ./dist ./node_modules ./.turbo && pnpm install"
   },
   "devDependencies": {
-    "@types/bun": "latest",
+    "@types/node": "latest",
     "bunchee": "^5.1.2"
   },
   "peerDependencies": {

@@ -4,9 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "PORT=3003 next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "build.app": "next build",
+    "clean": "rm -rf ./.next ./node_modules ./.turbo",
+    "start": "next start"
   },
   "dependencies": {
     "@cloudterms/nextjs": "workspace:*",
