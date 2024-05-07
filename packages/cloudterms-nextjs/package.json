@@ -3,10 +3,11 @@
   "module": "./dist/es/index.js",
   "type": "module",
   "private": false,
-  "version": "0.0.5",
+  "version": "0.0.15",
   "scripts": {
     "build": "bunchee",
-    "clean": "rm -rf ./dist ./node_modules ./.turbo && pnpm install"
+    "clean": "rm -rf ./dist ./node_modules ./.turbo && pnpm install",
+    "publish": "pnpm publish --access public"
   },
   "dependencies": {
     "@cloudterms/react": "workspace:*"

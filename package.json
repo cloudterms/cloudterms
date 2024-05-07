@@ -12,7 +12,8 @@
     "check.lint.fix": "eslint \"./**/*.ts*\" --fix",
     "check.types": "tsc --noEmit",
     "clean": "turbo clean",
-    "dev": "turbo dev"
+    "dev": "turbo dev",
+    "publish": "turbo publish"
   },
   "devDependencies": {
     "@ianvs/prettier-plugin-sort-imports": "4.2.1",
