@@ -1,4 +1,5 @@
 import { CloudTerms } from '@cloudterms/js'
+import { serve } from '@hono/node-server'
 import { Hono } from 'hono'
 import { cors } from 'hono/cors'
 
@@ -26,4 +27,10 @@ app.post('/users/:userId/agree', async c => {
   return c.json({ setAgreed })
 })
 
-export default app
+const port = Number(process.env.PORT) ?? 3002
+
+serve({
+  fetch: app.fetch,
+  port,
+})
+console.log(`Server is running on port ${port}`)

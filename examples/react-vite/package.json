@@ -2,12 +2,15 @@
   "name": "@cloudterms/react-vite-example",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview"
+    "build.app": "pnpm with-env tsc && vite build",
+    "clean": "rm -rf ./dist ./node_modules ./.turbo",
+    "dev": "PORT=3001 pnpm with-env  vite",
+    "preview": "pnpm with-env vite preview",
+    "with-env": "dotenv -e ../../.env -c --"
   },
   "dependencies": {
     "@cloudterms/react": "workspace:*",
+    "dotenv-cli": "7.4.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },

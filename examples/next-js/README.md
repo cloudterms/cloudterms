@@ -3,13 +3,13 @@
 1. Install dependencies
 
 ```sh
-bun install
+pnpm install
 ```
 
 2. Run application
 
 ```sh
-bun dev
+pnpm dev
 ```
 
 3. Open http://localhost:3003
