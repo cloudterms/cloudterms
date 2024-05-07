@@ -1,5 +1,5 @@
 import { NextResponse, type NextRequest } from 'next/server'
-import { CloudTerms } from '@cloudterms/js'
+import { CloudTerms } from '@cloudterms/react/server'
 
 type Context = {
   params: {

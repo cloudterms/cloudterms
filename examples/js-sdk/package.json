@@ -4,10 +4,12 @@
   "type": "module",
   "scripts": {
     "clean": "rm -rf ./node_modules",
-    "start": "tsx index.ts"
+    "start": "pnpm with-env tsx index.ts",
+    "with-env": "dotenv -e ../../.env -c --"
   },
   "dependencies": {
-    "@cloudterms/js": "workspace:*"
+    "@cloudterms/js": "workspace:*",
+    "dotenv-cli": "7.4.1"
   },
   "devDependencies": {
     "@types/node": "latest"
