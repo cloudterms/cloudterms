@@ -7,8 +7,7 @@
     "build.css": "tailwindcss -i ./src/styles.css -o ./dist/index.css --minify",
     "build.js": "bunchee",
     "build": "pnpm build.js && pnpm build.css",
-    "clean": "rm -rf ./dist ./node_modules ./.turbo && pnpm install",
-    "publish": "pnpm publish --access public"
+    "clean": "rm -rf ./dist ./node_modules ./.turbo && pnpm install"
   },
   "dependencies": {
     "@cloudterms/js": "workspace:*",

@@ -6,8 +6,7 @@
   "version": "0.0.15",
   "scripts": {
     "build": "bunchee",
-    "clean": "rm -rf ./dist ./node_modules ./.turbo && pnpm install",
-    "publish": "pnpm publish --access public"
+    "clean": "rm -rf ./dist ./node_modules ./.turbo && pnpm install"
   },
   "dependencies": {
     "@cloudterms/react": "workspace:*"
