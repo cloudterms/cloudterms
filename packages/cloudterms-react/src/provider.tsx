@@ -17,7 +17,6 @@ export const CloudTermsClientProvider = ({
   onAgree: () => Promise<boolean>
 }) => {
   const [_hasAgreed, _setHasAgreed] = React.useState<boolean>()
-  if (hasAgreed === true || !terms) return children
 
   const handleAgree = useCallback(() => {
     onAgree()
@@ -27,12 +26,12 @@ export const CloudTermsClientProvider = ({
 
   return (
     <>
-      <TermsDialog
+      {(hasAgreed === false && terms?.length) && <TermsDialog
         className="relative z-10"
         onAgree={handleAgree}
         isOpen={!Boolean(hasAgreed) && !_hasAgreed}
         terms={terms}
-      />
+      />}
       {children}
     </>
   )
