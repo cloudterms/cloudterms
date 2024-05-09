@@ -1,0 +1,11 @@
+{
+  "index": "Home",
+  "another": "Another Page",
+  "advanced": "Advanced",
+  "contact": {
+    "title": "Dashboard ↗",
+    "type": "page",
+    "href": "https://cloudterms.dev/dashboard",
+    "newWindow": true
+  }
+}
