@@ -1,40 +1,25 @@
-import { useEffect, useRef } from 'react'
+import { memo } from 'react';
 import type { Terms } from '@cloudterms/js'
 
-import { Button } from './components/ui/button'
-import { HTMLRenderer } from './html-renderer'
+import { TermsAgreementForm } from '@/src/components/term/TermsAgreementForm'
 
-export const TermsDialog = ({
+export const TermsDialog = memo(({
   isOpen,
   terms,
   onAgree,
   ...props
 }: {
   isOpen: boolean
-  terms: Terms
+  terms?: Terms
   onAgree: () => void
 } & React.HTMLProps<HTMLDialogElement>) => {
-  const ref = useRef<HTMLDialogElement | null>(null)
-
-  useEffect(() => {
-    if (isOpen) {
-      ref.current?.showModal()
-    } else {
-      ref.current?.close()
-    }
-  }, [isOpen])
+  if (!terms || !isOpen) return <></>
 
   return (
-    <dialog className="bg-red-500" ref={ref} {...props}>
-      <h2>Application agreements</h2>
-      {terms.map(term => {
-        return (
-          <div key={term.termId}>
-            <HTMLRenderer termContent={term.name} />
-          </div>
-        )
-      })}
-      <Button onClick={onAgree}>agree</Button>
-    </dialog>
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-gray-800 bg-opacity-75">
+      <div className="fixed left-[50%] top-[50%] z-51 grid w-full max-w-lg translate-x-[-50%] translate-y-[-50%] gap-4 border bg-background p-6 shadow-lg duration-200 sm:rounded-lg">
+        <TermsAgreementForm onAgree={onAgree} terms={terms} />
+      </div>
+    </div>
   )
-}
+})

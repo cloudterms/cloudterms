@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useCallback } from 'react'
 import type { Terms } from '@cloudterms/js'
 
 import { TermsDialog } from './terms-dialog'
@@ -19,15 +19,17 @@ export const CloudTermsClientProvider = ({
   const [_hasAgreed, _setHasAgreed] = React.useState<boolean>()
   if (hasAgreed === true || !terms) return children
 
+  const handleAgree = useCallback(() => {
+    onAgree()
+      .then(success => _setHasAgreed(success))
+      .catch(() => _setHasAgreed(false))
+  }, [onAgree])
+
   return (
     <>
       <TermsDialog
         className="relative z-10"
-        onAgree={() => {
-          onAgree()
-            .then(success => _setHasAgreed(success))
-            .catch(() => _setHasAgreed(false))
-        }}
+        onAgree={handleAgree}
         isOpen={!Boolean(hasAgreed) && !_hasAgreed}
         terms={terms}
       />
