@@ -2,6 +2,8 @@
 
 import { CloudTermsClientProvider, type Terms } from '@cloudterms/react'
 
+import '@cloudterms/react/index.css'
+
 export const CloudTermsNextClientProvider = ({
   userId,
   terms,
