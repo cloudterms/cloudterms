@@ -16,7 +16,6 @@ import {
   FormLabel,
   FormMessage,
 } from '@/src/components/ui/form'
-import { toast } from '@/src/components/ui/use-toast'
 
 type TermWithHasChecked = Term & { hasChecked: boolean }
 
@@ -39,7 +38,7 @@ const FormSchema = z.object({
     .refine(
       (value: TermWithHasChecked[]) => value.every(item => !!item.hasChecked),
       {
-        message: 'You have to accept all the terms.',
+        message: 'You must accept all terms to continue.',
       }
     ),
 })
@@ -61,14 +60,6 @@ export function TermsAgreementForm({
   })
 
   function onSubmit(data: z.infer<typeof FormSchema>) {
-    toast({
-      title: 'You acceptted the following terms:',
-      description: (
-        <pre className="mt-2 w-[340px] rounded-md bg-slate-950 p-4">
-          <code className="text-white">{JSON.stringify(data, null, 2)}</code>
-        </pre>
-      ),
-    })
     onAgree()
   }
 

@@ -30,7 +30,7 @@ export function TermContentDialog({
 
   return (
     <Dialog open={open} onOpenChange={closeModal}>
-      <DialogContent className="sm:max-w-md">
+      <DialogContent className="overflow-y-auto w-full h-auto max-h-full sm:min-h-lg sm:max-w-[800px] sm:max-h-[90vh]">
         <DialogHeader>
           <DialogTitle>{term.name}</DialogTitle>
         </DialogHeader>
