@@ -29,7 +29,6 @@
     "typescript": "^5.0.0"
   },
   "dependencies": {
-    "@radix-ui/react-checkbox": "1.0.4",
     "turbo": "1.13.3"
   }
 }

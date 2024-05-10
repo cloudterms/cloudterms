@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react'
 import { CloudTermsClientProvider, type Terms } from '@cloudterms/react'
 
+import '@cloudterms/react/index.css'
+
 import { Coffee } from './coffee'
 import { useUser } from './use-user'
 
