@@ -15,7 +15,10 @@
     "dev": "turbo dev",
     "publish": "pnpm publish -r --access public"
   },
-  "devDependencies": {
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
     "@ianvs/prettier-plugin-sort-imports": "4.2.1",
     "@types/eslint": "8.56.10",
     "@typescript-eslint/eslint-plugin": "7.8.0",
@@ -23,12 +26,7 @@
     "eslint": "8.57.0",
     "eslint-config-next": "14.2.3",
     "madge": "7.0.0",
-    "prettier": "3.2.5"
-  },
-  "peerDependencies": {
-    "typescript": "^5.0.0"
-  },
-  "dependencies": {
+    "prettier": "3.2.5",
     "turbo": "1.13.3"
   }
 }
