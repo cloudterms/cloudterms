@@ -8,14 +8,14 @@ export const CloudTermsProvider = async ({
   userId,
 }: {
   children: React.ReactNode
-  userId?: string
+  userId?: string | null
 }) => {
   const cloudterms = CloudTerms()
   const terms = await cloudterms.terms.get()
 
   const hasAgreed = await (userId
     ? cloudterms.user.hasAgreed(userId)
-    : Promise.resolve(false))
+    : Promise.resolve(true))
 
   return (
     <CloudTermsNextClientProvider

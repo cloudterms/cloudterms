@@ -3,13 +3,13 @@
   "module": "./dist/es/index.js",
   "type": "module",
   "private": false,
-  "version": "0.0.15",
+  "version": "0.0.17",
   "scripts": {
     "build": "bunchee",
     "clean": "rm -rf ./dist ./node_modules ./.turbo && pnpm install"
   },
   "dependencies": {
-    "@cloudterms/react": "workspace:*"
+    "@cloudterms/react": "0.0.17"
   },
   "devDependencies": {
     "@types/node": "latest",
@@ -19,7 +19,7 @@
   },
   "peerDependencies": {
     "typescript": "^5.0.0",
-    "next": "14.2.3"
+    "next": "^14.0.0"
   },
   "files": [
     "dist"

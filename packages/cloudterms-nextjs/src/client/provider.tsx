@@ -2,13 +2,15 @@
 
 import { CloudTermsClientProvider, type Terms } from '@cloudterms/react'
 
+import '@cloudterms/react/index.css'
+
 export const CloudTermsNextClientProvider = ({
   userId,
   terms,
   hasAgreed = true,
   children,
 }: {
-  userId?: string
+  userId?: string | null
   terms?: Terms
   hasAgreed: boolean
   children: React.ReactNode

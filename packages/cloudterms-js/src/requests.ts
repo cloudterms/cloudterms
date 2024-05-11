@@ -20,6 +20,7 @@ const request = (
     method: 'GET',
     headers,
     redirect: 'follow',
+    cache: 'no-store'
   }
 
   const _requestOptions: RequestInit = {
