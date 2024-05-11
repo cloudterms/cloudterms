@@ -11,7 +11,7 @@ export const CloudTermsClientProvider = ({
   onAgree,
 }: {
   children: React.ReactNode
-  userId?: string
+  userId?: string | null
   terms?: Terms
   hasAgreed: boolean
   onAgree: () => Promise<boolean>
@@ -26,12 +26,14 @@ export const CloudTermsClientProvider = ({
 
   return (
     <>
-      {(hasAgreed === false && terms?.length) && <TermsDialog
-        className="relative z-10"
-        onAgree={handleAgree}
-        isOpen={!Boolean(hasAgreed) && !_hasAgreed}
-        terms={terms}
-      />}
+      {hasAgreed === false && terms?.length && (
+        <TermsDialog
+          className="relative z-10"
+          onAgree={handleAgree}
+          isOpen={!Boolean(hasAgreed) && !_hasAgreed}
+          terms={terms}
+        />
+      )}
       {children}
     </>
   )

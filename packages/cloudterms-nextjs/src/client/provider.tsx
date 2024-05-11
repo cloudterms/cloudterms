@@ -10,7 +10,7 @@ export const CloudTermsNextClientProvider = ({
   hasAgreed = true,
   children,
 }: {
-  userId?: string
+  userId?: string | null
   terms?: Terms
   hasAgreed: boolean
   children: React.ReactNode

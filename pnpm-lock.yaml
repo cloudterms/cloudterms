@@ -155,7 +155,7 @@ importers:
   packages/cloudterms-nextjs:
     dependencies:
       '@cloudterms/react':
-        specifier: 0.0.16
+        specifier: 0.0.17
         version: link:../cloudterms-react
       next:
         specifier: ^14.0.0
@@ -180,7 +180,7 @@ importers:
   packages/cloudterms-react:
     dependencies:
       '@cloudterms/js':
-        specifier: 0.0.16
+        specifier: 0.0.17
         version: link:../cloudterms-js
       '@hookform/resolvers':
         specifier: 3.3.4

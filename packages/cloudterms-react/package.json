@@ -2,7 +2,7 @@
   "name": "@cloudterms/react",
   "module": "./dist/es/index.js",
   "type": "module",
-  "version": "0.0.16",
+  "version": "0.0.17",
   "scripts": {
     "build.css": "tailwindcss -i ./src/styles.css -o ./dist/index.css --minify",
     "build.js": "bunchee",
@@ -10,7 +10,7 @@
     "clean": "rm -rf ./dist ./node_modules ./.turbo && pnpm install"
   },
   "dependencies": {
-    "@cloudterms/js": "0.0.16",
+    "@cloudterms/js": "0.0.17",
     "@hookform/resolvers": "3.3.4",
     "@radix-ui/react-checkbox": "1.0.4",
     "@radix-ui/react-dialog": "1.0.5",

@@ -3,13 +3,13 @@
   "module": "./dist/es/index.js",
   "type": "module",
   "private": false,
-  "version": "0.0.16",
+  "version": "0.0.17",
   "scripts": {
     "build": "bunchee",
     "clean": "rm -rf ./dist ./node_modules ./.turbo && pnpm install"
   },
   "dependencies": {
-    "@cloudterms/react": "0.0.16"
+    "@cloudterms/react": "0.0.17"
   },
   "devDependencies": {
     "@types/node": "latest",
