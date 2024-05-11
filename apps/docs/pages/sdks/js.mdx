@@ -5,6 +5,7 @@ The [@cloudterms/js](https://www.npmjs.com/package/@cloudterms/js) package provi
 ###### [Example](https://github.com/cloudterms/cloudterms/tree/main/examples/js-sdk)
 
 ## Setup
+
 ### Install `@cloudterms/js`
 
 ```bash
@@ -12,6 +13,7 @@ npm install @cloudterms/js
 ```
 
 ### Set your environment variables
+
 ```bash
 # Your application ID
 CLOUDTERMS_APP_ID="xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
@@ -20,6 +22,7 @@ CLOUDTERMS_APP_SECRET="sk_live.xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 ```
 
 ## Usage
+
 ```typescript
 import { CloudTerms } from '@cloudterms/js'
 
@@ -39,10 +42,13 @@ const setAgreed = await cloudterms.user.setAgreed('some-unique-user-id')
 ```
 
 ## Methods
+
 ### `CloudTerms().terms.get()`
+
 Get all your applications terms
 
-__Response:__
+**Response:**
+
 ```typescript
 {
   terms: [
@@ -62,16 +68,19 @@ __Response:__
 ```
 
 ### `CloudTerms().user.hasAgreed(userId: string)`
+
 Check if a user has agreed to the latest terms
 
-__Parameters:__
+**Parameters:**
+
 ```typescript
 {
   userId: string // Unique user ID provided by your application
 }
 ```
 
-__Response:__
+**Response:**
+
 ```typescript
 {
   hasAgreed: boolean
@@ -79,21 +88,23 @@ __Response:__
 ```
 
 ### `CloudTerms().user.setAgreed(userId: string)`
+
 Set that a user has agreed to the latest terms
 
-__Parameters:__
+**Parameters:**
+
 ```typescript
 {
   userId: string // Unique user ID provided by your application
 }
 ```
 
-__Response:__
+**Response:**
+
 ```typescript
 {
-    userId: string;
-    applicationId: string;
-    lastAgreed: Date | null; // Date the user last agreed to the terms, or null if they have never agreed
+  userId: string
+  applicationId: string
+  lastAgreed: Date | null // Date the user last agreed to the terms, or null if they have never agreed
 }
 ```
-

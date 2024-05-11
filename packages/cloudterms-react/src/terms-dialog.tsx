@@ -1,18 +1,17 @@
-import { memo } from 'react';
+import { memo } from 'react'
 import type { Terms } from '@cloudterms/js'
 
 import { TermsAgreementForm } from '@/src/components/term/TermsAgreementForm'
 
-export const TermsDialog = memo(({
+export const TermsDialog = memo(function TermsDialog({
   isOpen,
   terms,
   onAgree,
-  ...props
 }: {
   isOpen: boolean
   terms?: Terms
   onAgree: () => void
-} & React.HTMLProps<HTMLDialogElement>) => {
+} & React.HTMLProps<HTMLDialogElement>) {
   if (!terms || !isOpen) return <></>
 
   return (
