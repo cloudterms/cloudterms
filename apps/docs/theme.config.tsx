@@ -12,10 +12,10 @@ const config: DocsThemeConfig = {
   project: {
     link: 'https://github.com/cloudterms/cloudterms',
   },
-  // chat: {
-  //   link: 'https://discord.com',
-  // },
-  docsRepositoryBase: 'https://github.com/cloudterms/cloudterms/apps/docs',
+  chat: {
+    link: 'https://discord.gg/XGK3cmEY2A',
+  },
+  docsRepositoryBase: 'https://github.com/cloudterms/cloudterms',
   footer: {
     text: 'CloudTerms Docs',
   },

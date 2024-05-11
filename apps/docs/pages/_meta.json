@@ -1,7 +1,7 @@
 {
   "index": "Home",
   "sdks": "SDK References",
-  "contact": {
+  "dashboard": {
     "title": "Dashboard ↗",
     "type": "page",
     "href": "https://cloudterms.dev/dashboard",

@@ -2,6 +2,8 @@
 
 The [@cloudterms/js](https://www.npmjs.com/package/@cloudterms/js) package provides a type-safe SDK for interacting with the CloudTerms API.
 
+###### [Example](https://github.com/cloudterms/cloudterms/tree/main/examples/js-sdk)
+
 ## Setup
 ### Install `@cloudterms/js`
 
@@ -40,7 +42,7 @@ const setAgreed = await cloudterms.user.setAgreed('some-unique-user-id')
 ### `CloudTerms().terms.get()`
 Get all your applications terms
 
-Response:
+__Response:__
 ```typescript
 {
   terms: [
@@ -62,14 +64,14 @@ Response:
 ### `CloudTerms().user.hasAgreed(userId: string)`
 Check if a user has agreed to the latest terms
 
-Parameters:
+__Parameters:__
 ```typescript
 {
   userId: string // Unique user ID provided by your application
 }
 ```
 
-Response:
+__Response:__
 ```typescript
 {
   hasAgreed: boolean
@@ -79,14 +81,14 @@ Response:
 ### `CloudTerms().user.setAgreed(userId: string)`
 Set that a user has agreed to the latest terms
 
-Parameters:
+__Parameters:__
 ```typescript
 {
   userId: string // Unique user ID provided by your application
 }
 ```
 
-Response:
+__Response:__
 ```typescript
 {
     userId: string;
@@ -94,3 +96,4 @@ Response:
     lastAgreed: Date | null; // Date the user last agreed to the terms, or null if they have never agreed
 }
 ```
+
