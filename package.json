@@ -13,6 +13,7 @@
     "check.types": "tsc --noEmit",
     "clean": "turbo clean",
     "dev": "turbo dev",
+    "dev.docs": "pnpm --filter docs dev",
     "publish": "pnpm publish -r --access public"
   },
   "peerDependencies": {
