@@ -30,7 +30,7 @@ CLOUDTERMS_APP_SECRET="sk_live.xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 ## Usage
 
-### Setup the API handler
+### Create the API handler
 
 Add the following in `/app/api/cloudterms/[...cloudterms]/route.ts`.
 
@@ -40,7 +40,7 @@ import { CloudTermsHandler } from '@cloudterms/nextjs/server'
 export const { GET, POST } = CloudTermsHandler()
 ```
 
-### Setup the CloudTermsProvider
+### Add the CloudTermsProvider
 
 Add the following to your root `/app/layout.tsx
 
