@@ -29,9 +29,7 @@ export type Term = {
 export type Terms = Term[]
 
 export type AgreedRes = {
-  externalUserId: string
+  userId: string
+  lastAgreed: Date | null
   applicationId: string
-  createdAt: Date
-  updatedAt: Date
-  lastAgreed: Date
 }

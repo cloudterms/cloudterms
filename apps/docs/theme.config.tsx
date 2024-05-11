@@ -19,6 +19,11 @@ const config: DocsThemeConfig = {
   footer: {
     text: 'CloudTerms Docs',
   },
+  useNextSeoProps() {
+    return {
+      titleTemplate: '%s – CloudTerms',
+    }
+  },
 }
 
 export default config

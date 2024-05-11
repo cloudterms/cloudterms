@@ -1,7 +1,6 @@
 {
   "index": "Home",
-  "another": "Another Page",
-  "advanced": "Advanced",
+  "sdks": "SDK References",
   "contact": {
     "title": "Dashboard ↗",
     "type": "page",
