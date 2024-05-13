@@ -17,30 +17,19 @@ import {
   FormMessage,
 } from '@/src/components/ui/form'
 
-type TermWithHasChecked = Term & { hasChecked: boolean }
-
-const TermSchema = z.object({
-  applicationId: z.string(),
-  id: z.number(),
-  name: z.string(),
-  createdAt: z.string(),
-  updatedAt: z.string(),
-  userId: z.string(),
-  orgId: z.string().nullable(),
+const TermItemSchema = z.object({
   termId: z.string(),
-  content: z.string(),
   hasChecked: z.boolean(),
 })
 
+type TermItem = z.infer<typeof TermItemSchema>
+
 const FormSchema = z.object({
   terms: z
-    .array(TermSchema)
-    .refine(
-      (value: TermWithHasChecked[]) => value.every(item => !!item.hasChecked),
-      {
-        message: 'You must accept all terms to continue.',
-      }
-    ),
+    .array(TermItemSchema)
+    .refine(value => value.every(item => !!item.hasChecked), {
+      message: 'You must accept all terms to continue.',
+    }),
 })
 
 export function TermsAgreementForm({
@@ -55,7 +44,7 @@ export function TermsAgreementForm({
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
     defaultValues: {
-      terms: terms.map(item => ({ ...item, hasChecked: false })),
+      terms: terms.map(item => ({ termId: item.termId, hasChecked: false })),
     },
   })
 
@@ -73,35 +62,34 @@ export function TermsAgreementForm({
             render={() => (
               <FormItem>
                 <div className="mb-4">
-                  <FormLabel className="text-base">Terms of Service</FormLabel>
+                  <FormLabel className="text-base">Agreements</FormLabel>
                   <FormDescription>
                     Select the terms you want to accept.
                   </FormDescription>
                 </div>
                 {terms.map((term: Term) => (
                   <FormField
-                    key={term.id}
+                    key={term.termId}
                     control={form.control}
                     name="terms"
                     render={({ field }) => {
                       return (
                         <div className="flex flex-row terms-start space-x-3 mt-3">
-                          <FormItem key={term.id}>
+                          <FormItem key={term.termId}>
                             <FormControl>
                               <Checkbox
                                 checked={
-                                  !!field.value?.find(
-                                    (item: TermWithHasChecked) =>
-                                      item.id === term.id
-                                  ).hasChecked
+                                  field.value.find(
+                                    (item: TermItem) =>
+                                      item.termId === term.termId
+                                  )?.hasChecked ?? false
                                 }
                                 onCheckedChange={checked =>
                                   field.onChange(
-                                    field.value.map(
-                                      (item: TermWithHasChecked) =>
-                                        item.id === term.id
-                                          ? { ...item, hasChecked: checked }
-                                          : item
+                                    field.value.map((item: TermItem) =>
+                                      item.termId === term.termId
+                                        ? { ...item, hasChecked: checked }
+                                        : item
                                     )
                                   )
                                 }
