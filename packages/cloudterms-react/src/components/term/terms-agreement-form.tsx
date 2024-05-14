@@ -4,7 +4,7 @@ import { zodResolver } from '@hookform/resolvers/zod'
 import { useForm } from 'react-hook-form'
 import { z } from 'zod'
 
-import { TermContentDialog } from '@/src/components/term/TermContentDialog'
+import { TermContentDialog } from '@/src/components/term/term-content-dialog'
 import { Button } from '@/src/components/ui/button'
 import { Checkbox } from '@/src/components/ui/checkbox'
 import {
