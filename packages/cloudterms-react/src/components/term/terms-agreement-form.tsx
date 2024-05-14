@@ -62,7 +62,7 @@ export function TermsAgreementForm({
             render={() => (
               <FormItem>
                 <div className="mb-4">
-                  <FormLabel className="text-base">Agreements</FormLabel>
+                  <FormLabel className="text-zinc-900">Agreements</FormLabel>
                   <FormDescription>
                     Select the terms you want to accept.
                   </FormDescription>
@@ -97,7 +97,7 @@ export function TermsAgreementForm({
                             </FormControl>
                           </FormItem>
                           <FormLabel className="font-normal">
-                            Accept{' '}
+                            <span className="text-zinc-900">Accept </span>
                             <span
                               className="cursor-pointer text-blue-500 hover:text-blue-700 font-bold"
                               onClick={e => {
