@@ -1,1 +1,112 @@
 # @cloudterms/js
+
+# JS Quickstart
+
+The @cloudterms/js package provides a type-safe SDK for interacting with the CloudTerms API.
+
+###### [Docs](https://docs.cloudterms.dev) | [Example](https://github.com/cloudterms/cloudterms/tree/main/examples/js-sdk)
+
+## Setup
+
+### Install `@cloudterms/js`
+
+```bash
+npm install @cloudterms/js
+```
+
+### Set your environment variables
+
+```bash
+# Your application ID
+CLOUDTERMS_APP_ID="xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+# Your application secret
+CLOUDTERMS_APP_SECRET="sk_live.xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+```
+
+## Usage
+
+```typescript
+import { CloudTerms } from '@cloudterms/js'
+
+// Initialize the SDK
+const cloudterms = CloudTerms()
+// You can also pass in your application ID and secret, this will override the environment variables
+const cloudterms2 = CloudTerms({ appId: 'my-app-id', secret: 'my-app-secret' })
+
+// Get all your applications terms
+const terms = await cloudterms.terms.get()
+
+// Check if a user has agreed to the latest terms
+const hasAgreed = await cloudterms.user.hasAgreed('some-unique-user-id')
+
+// Set that a user has agreed to the latest terms
+const setAgreed = await cloudterms.user.setAgreed('some-unique-user-id')
+```
+
+## Methods
+
+### `CloudTerms().terms.get()`
+
+Get all your applications terms
+
+**Response:**
+
+```typescript
+{
+  terms: [
+    {
+      id: number
+      applicationId: string // Your application ID
+      name: string // Name of the term
+      userId: string // Unique user ID provided by your application
+      orgId: string | null // Your organization ID in CloudTerms, if applicable
+      termId: string
+      content: string // HTML content of the term
+      createdAt: Date
+      updatedAt: Date
+    }
+  ]
+}
+```
+
+### `CloudTerms().user.hasAgreed(userId: string)`
+
+Check if a user has agreed to the latest terms
+
+**Parameters:**
+
+```typescript
+{
+  userId: string // Unique user ID provided by your application
+}
+```
+
+**Response:**
+
+```typescript
+{
+  hasAgreed: boolean
+}
+```
+
+### `CloudTerms().user.setAgreed(userId: string)`
+
+Set that a user has agreed to the latest terms
+
+**Parameters:**
+
+```typescript
+{
+  userId: string // Unique user ID provided by your application
+}
+```
+
+**Response:**
+
+```typescript
+{
+  userId: string
+  applicationId: string
+  lastAgreed: Date | null // Date the user last agreed to the terms, or null if they have never agreed
+}
+```

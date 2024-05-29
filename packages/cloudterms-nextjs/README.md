@@ -1,1 +1,60 @@
 # cloudterms-nextjs
+
+# Next.js Quickstart
+
+Take your Next.js application to the next level with @cloudterms/nextjs. This package provides a seamless terms agreement experience, including a pre-built CloudTermsProvider component and an API handler that eliminates the need for manual CloudTerms API interactions.
+
+Key Features:
+
+- Includes the @cloudterms/react SDK.
+- Pre-built Agree to Terms Component: A modal window that pops up, disabling your app until the user agrees to the terms.
+- API Handler: Automatically handles CloudTerms API interactions, saving you time and effort.
+- Easy Integration: Simply wrap your app with the CloudTermsProvider component and configure the API handler to get started.
+- Customizable: Tailor the agreement experience to fit your brand and needs.
+
+Streamline term agreements and focus on building your Next.js application with @cloudterms/nextjs!
+
+###### [Docs](https://docs.cloudterms.dev) | [Example](https://github.com/cloudterms/cloudterms/tree/main/examples/next-js)
+
+## Setup
+
+### Install `@cloudterms/nextjs`
+
+```bash
+npm install @cloudterms/nextjs
+```
+
+### Set your environment variables
+
+```bash
+# Your application ID
+CLOUDTERMS_APP_ID="xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+# Your application secret
+CLOUDTERMS_APP_SECRET="sk_live.xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+```
+
+## Usage
+
+### Create the API handler
+
+Add the following in `/app/api/cloudterms/[...cloudterms]/route.ts`.
+
+```typescript
+import { CloudTermsHandler } from '@cloudterms/nextjs/server'
+
+export const { GET, POST } = CloudTermsHandler()
+```
+
+### Add the CloudTermsProvider
+
+Add the following to your root `/app/layout.tsx
+
+Wrap your app with the CloudTermsProvider component.
+
+**Props:**
+
+- `userId` A unique userId that identifies the user to track their agreements.
+
+```jsx
+<CloudTermsProvider userId={userId}>{children}</CloudTermsProvider>
+```

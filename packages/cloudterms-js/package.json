@@ -3,7 +3,7 @@
   "module": "./dist/es/index.js",
   "type": "module",
   "private": false,
-  "version": "0.0.18",
+  "version": "0.0.20",
   "scripts": {
     "build": "bunchee",
     "clean": "rm -rf ./dist ./node_modules ./.turbo && pnpm install"

@@ -14,7 +14,7 @@
     "clean": "turbo clean",
     "dev": "turbo dev",
     "dev.docs": "pnpm --filter docs dev",
-    "publish": "pnpm publish -r --access public"
+    "publish.all": "./scripts/publish-all.sh"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
