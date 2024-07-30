@@ -1,23 +1,23 @@
 {
-  "name": "@cloudterms/docs",
-  "version": "0.0.1",
-  "description": "CloudTerms docs",
-  "scripts": {
-    "build": "next build",
-    "dev": "PORT=3004 next dev",
-    "start": "next start",
-    "update-deps": "ncu -u && pnpm i"
-  },
-  "dependencies": {
-    "next": "14.2.5",
-    "nextra": "latest",
-    "nextra-theme-docs": "latest",
-    "react": "18.3.1",
-    "react-dom": "18.3.1"
-  },
-  "devDependencies": {
-    "@types/node": "20.14.12",
-    "npm-check-updates": "16.14.20",
-    "typescript": "5.5.4"
-  }
+	"name": "@cloudterms/docs",
+	"version": "0.0.1",
+	"description": "CloudTerms docs",
+	"scripts": {
+		"build": "next build",
+		"dev": "PORT=3004 next dev",
+		"start": "next start",
+		"update-deps": "ncu -u && pnpm i"
+	},
+	"dependencies": {
+		"next": "14.2.5",
+		"nextra": "latest",
+		"nextra-theme-docs": "latest",
+		"react": "18.3.1",
+		"react-dom": "18.3.1"
+	},
+	"devDependencies": {
+		"@types/node": "20.14.12",
+		"npm-check-updates": "16.14.20",
+		"typescript": "5.5.4"
+	}
 }

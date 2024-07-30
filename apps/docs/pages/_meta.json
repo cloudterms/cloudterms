@@ -1,10 +1,10 @@
 {
-  "index": "Home",
-  "sdks": "SDK References",
-  "dashboard": {
-    "title": "Dashboard ↗",
-    "type": "page",
-    "href": "https://cloudterms.dev/dashboard",
-    "newWindow": true
-  }
+	"index": "Home",
+	"sdks": "SDK References",
+	"dashboard": {
+		"title": "Dashboard ↗",
+		"type": "page",
+		"href": "https://cloudterms.dev/dashboard",
+		"newWindow": true
+	}
 }

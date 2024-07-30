@@ -1,19 +1,19 @@
 {
-  "name": "@cloudterms/hono-api-example",
-  "type": "module",
-  "scripts": {
-    "clean": "rm -rf dist",
-    "dev": "PORT=3002 pnpm with-env tsx watch src/index.ts",
-    "with-env": "dotenv -e ../../.env -c --"
-  },
-  "dependencies": {
-    "@cloudterms/js": "workspace:*",
-    "@hono/node-server": "^1.11.1",
-    "dotenv-cli": "7.4.1",
-    "hono": "^4.3.2"
-  },
-  "devDependencies": {
-    "@types/node": "latest",
-    "tsx": "^4.7.1"
-  }
+	"name": "@cloudterms/hono-api-example",
+	"type": "module",
+	"scripts": {
+		"clean": "rm -rf dist",
+		"dev": "PORT=3002 pnpm with-env tsx watch src/index.ts",
+		"with-env": "dotenv -e ../../.env -c --"
+	},
+	"dependencies": {
+		"@cloudterms/js": "workspace:*",
+		"@hono/node-server": "^1.11.1",
+		"dotenv-cli": "7.4.1",
+		"hono": "^4.3.2"
+	},
+	"devDependencies": {
+		"@types/node": "latest",
+		"tsx": "^4.7.1"
+	}
 }

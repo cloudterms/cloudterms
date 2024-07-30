@@ -1,6 +1,5 @@
-import React from 'react'
 import { CloudTerms } from '@cloudterms/react/server'
-
+import type React from 'react'
 import { CloudTermsNextClientProvider } from './client/provider'
 
 export const CloudTermsProvider = async ({

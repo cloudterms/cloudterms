@@ -1,24 +1,24 @@
 {
-  "name": "@cloudterms/nextjs-example",
-  "private": true,
-  "scripts": {
-    "build.app": "pnpm with-env next build",
-    "clean": "rm -rf ./.next ./node_modules ./.turbo",
-    "dev": "PORT=3003 pnpm with-env next dev",
-    "start": "pnpm with-env next start",
-    "with-env": "dotenv -e ../../.env -c --"
-  },
-  "dependencies": {
-    "@cloudterms/nextjs": "workspace:*",
-    "dotenv-cli": "7.4.1",
-    "next": "14.2.3",
-    "react": "^18",
-    "react-dom": "^18"
-  },
-  "devDependencies": {
-    "@types/node": "latest",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "typescript": "^5"
-  }
+	"name": "@cloudterms/nextjs-example",
+	"private": true,
+	"scripts": {
+		"build.app": "pnpm with-env next build",
+		"clean": "rm -rf ./.next ./node_modules ./.turbo",
+		"dev": "PORT=3003 pnpm with-env next dev",
+		"start": "pnpm with-env next start",
+		"with-env": "dotenv -e ../../.env -c --"
+	},
+	"dependencies": {
+		"@cloudterms/nextjs": "workspace:*",
+		"dotenv-cli": "7.4.1",
+		"next": "14.2.3",
+		"react": "^18",
+		"react-dom": "^18"
+	},
+	"devDependencies": {
+		"@types/node": "latest",
+		"@types/react": "^18",
+		"@types/react-dom": "^18",
+		"typescript": "^5"
+	}
 }

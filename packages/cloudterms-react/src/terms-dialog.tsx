@@ -1,7 +1,6 @@
-import { memo } from 'react'
-import type { Terms } from '@cloudterms/js'
-
 import { TermsAgreementForm } from '@/src/components/term/terms-agreement-form'
+import type { Terms } from '@cloudterms/js'
+import { memo } from 'react'
 
 export const TermsDialog = memo(function TermsDialog({
   isOpen,

@@ -6,14 +6,14 @@ const BASE_URL = getBaseUrl()
 const request = (
   config: FullCloudTermsConfig,
   path: string,
-  requestOptions: RequestInit = {}
+  requestOptions: RequestInit = {},
 ) => {
   const authRaw = `${config.appId}:${config.secret}`
 
   const headers = new Headers()
   headers.append(
     'Authorization',
-    `Basic ${Buffer.from(authRaw).toString('base64')}`
+    `Basic ${Buffer.from(authRaw).toString('base64')}`,
   )
 
   const defaultRequestOptions: RequestInit = {
@@ -39,7 +39,7 @@ export async function termsGet(config: FullCloudTermsConfig): Promise<Terms> {
 
 export async function userSetAgreed(
   config: FullCloudTermsConfig,
-  userId: UserId
+  userId: UserId,
 ): Promise<AgreedRes> {
   const res = await request(config, `users/${userId}/agree`, { method: 'POST' })
   const json = (await res.json()) as { data: AgreedRes }
@@ -48,7 +48,7 @@ export async function userSetAgreed(
 
 export async function userHasAgreed(
   config: FullCloudTermsConfig,
-  userId: UserId
+  userId: UserId,
 ): Promise<boolean> {
   const res = await request(config, `users/${userId}/has-agreed`)
   const json = (await res.json()) as { data: boolean }

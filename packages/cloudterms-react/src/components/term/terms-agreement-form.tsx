@@ -1,9 +1,3 @@
-import { useState } from 'react'
-import type { Term, Terms } from '@cloudterms/js'
-import { zodResolver } from '@hookform/resolvers/zod'
-import { useForm } from 'react-hook-form'
-import { z } from 'zod'
-
 import { TermContentDialog } from '@/src/components/term/term-content-dialog'
 import { Button } from '@/src/components/ui/button'
 import { Checkbox } from '@/src/components/ui/checkbox'
@@ -16,6 +10,11 @@ import {
   FormLabel,
   FormMessage,
 } from '@/src/components/ui/form'
+import type { Term, Terms } from '@cloudterms/js'
+import { zodResolver } from '@hookform/resolvers/zod'
+import { useState } from 'react'
+import { useForm } from 'react-hook-form'
+import { z } from 'zod'
 
 const TermItemSchema = z.object({
   termId: z.string(),
@@ -81,7 +80,7 @@ export function TermsAgreementForm({
                                 checked={
                                   field.value.find(
                                     (item: TermItem) =>
-                                      item.termId === term.termId
+                                      item.termId === term.termId,
                                   )?.hasChecked ?? false
                                 }
                                 onCheckedChange={checked =>
@@ -89,8 +88,8 @@ export function TermsAgreementForm({
                                     field.value.map((item: TermItem) =>
                                       item.termId === term.termId
                                         ? { ...item, hasChecked: checked }
-                                        : item
-                                    )
+                                        : item,
+                                    ),
                                   )
                                 }
                               />
@@ -98,6 +97,7 @@ export function TermsAgreementForm({
                           </FormItem>
                           <FormLabel className="font-normal">
                             <span className="text-zinc-900">Accept </span>
+                            {/* biome-ignore lint/a11y/useKeyWithClickEvents: <explanation> */}
                             <span
                               className="cursor-pointer text-blue-500 hover:text-blue-700 font-bold"
                               onClick={e => {
