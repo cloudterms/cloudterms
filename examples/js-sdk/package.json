@@ -5,11 +5,12 @@
 	"scripts": {
 		"clean": "rm -rf ./node_modules",
 		"start": "pnpm with-env tsx index.ts",
+		"update-deps": "ncu -u && pnpm i",
 		"with-env": "dotenv -e ../../.env -c --"
 	},
 	"dependencies": {
 		"@cloudterms/js": "workspace:*",
-		"dotenv-cli": "7.4.1"
+		"dotenv-cli": "7.4.2"
 	},
 	"devDependencies": {
 		"@types/node": "latest"

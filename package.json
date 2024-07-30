@@ -14,21 +14,18 @@
 		"clean": "turbo clean",
 		"dev": "turbo dev",
 		"dev.docs": "pnpm --filter docs dev",
-		"publish.all": "./scripts/publish-all.sh"
+		"publish.all": "./scripts/publish-all.sh",
+		"update-deps": "turbo update-deps",
+		"update-deps.root": "ncu -u && pnpm i"
 	},
 	"peerDependencies": {
 		"typescript": "^5.0.0"
 	},
 	"dependencies": {
 		"@biomejs/biome": "1.8.3",
-		"@ianvs/prettier-plugin-sort-imports": "4.2.1",
-		"@types/eslint": "8.56.10",
-		"@typescript-eslint/eslint-plugin": "7.8.0",
-		"@typescript-eslint/parser": "7.8.0",
-		"eslint": "8.57.0",
-		"eslint-config-next": "14.2.3",
 		"madge": "7.0.0",
-		"prettier": "3.2.5",
-		"turbo": "1.13.3"
-	}
+		"npm-check-updates": "16.14.20",
+		"turbo": "2.0.9"
+	},
+	"packageManager": "pnpm@9.3.0"
 }

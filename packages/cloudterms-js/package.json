@@ -6,11 +6,12 @@
 	"version": "0.0.21",
 	"scripts": {
 		"build": "bunchee",
-		"clean": "rm -rf ./dist ./node_modules ./.turbo && pnpm install"
+		"clean": "rm -rf ./dist ./node_modules ./.turbo && pnpm install",
+		"update-deps": "ncu -u && pnpm i"
 	},
 	"devDependencies": {
 		"@types/node": "latest",
-		"bunchee": "^5.1.2"
+		"bunchee": "5.3.1"
 	},
 	"peerDependencies": {
 		"typescript": "^5.0.0"

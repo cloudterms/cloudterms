@@ -6,19 +6,20 @@
 		"clean": "rm -rf ./dist ./node_modules ./.turbo",
 		"dev": "PORT=3001 pnpm with-env  vite",
 		"preview": "pnpm with-env vite preview",
+		"update-deps": "ncu -u && pnpm i",
 		"with-env": "dotenv -e ../../.env -c --"
 	},
 	"dependencies": {
 		"@cloudterms/react": "workspace:*",
-		"dotenv-cli": "7.4.1",
-		"react": "^18.2.0",
-		"react-dom": "^18.2.0"
+		"dotenv-cli": "7.4.2",
+		"react": "^18.3.1",
+		"react-dom": "^18.3.1"
 	},
 	"devDependencies": {
-		"@types/react": "^18.2.66",
-		"@types/react-dom": "^18.2.22",
-		"@vitejs/plugin-react": "^4.2.1",
-		"typescript": "^5.2.2",
-		"vite": "^5.2.0"
+		"@types/react": "^18.3.3",
+		"@types/react-dom": "^18.3.0",
+		"@vitejs/plugin-react": "^4.3.1",
+		"typescript": "^5.5.4",
+		"vite": "^5.3.5"
 	}
 }
