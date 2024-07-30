@@ -1,6 +1,3 @@
-import { useState } from 'react'
-import type { Term } from '@cloudterms/js'
-
 import { Button } from '@/src/components/ui/button'
 import {
   Dialog,
@@ -11,6 +8,8 @@ import {
   DialogTitle,
 } from '@/src/components/ui/dialog'
 import { HTMLRenderer } from '@/src/html-renderer'
+import type { Term } from '@cloudterms/js'
+import { useState } from 'react'
 
 export function TermContentDialog({
   term,

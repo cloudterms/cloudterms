@@ -1,6 +1,5 @@
-import React, { useCallback } from 'react'
 import type { Terms } from '@cloudterms/js'
-
+import React, { useCallback } from 'react'
 import { TermsDialog } from './terms-dialog'
 
 export const CloudTermsClientProvider = ({
@@ -30,7 +29,7 @@ export const CloudTermsClientProvider = ({
         <TermsDialog
           className="relative z-10"
           onAgree={handleAgree}
-          isOpen={!Boolean(hasAgreed) && !_hasAgreed}
+          isOpen={!hasAgreed && !_hasAgreed}
           terms={terms}
         />
       )}

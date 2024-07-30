@@ -1,8 +1,8 @@
 {
-  "name": "cloudterms",
-  "type": "module",
-  "scripts": {
-    "build": "turbo build",
+	"name": "cloudterms",
+	"type": "module",
+	"scripts": {
+		"build": "turbo build",
 		"check.all": "pnpm check.types && biome check .",
 		"check.all.fix": "pnpm check.types && biome check --write .",
 		"check.circular-deps": "madge --circular --extensions ts,tsx .",
@@ -11,24 +11,24 @@
 		"check.lint": "biome lint .",
 		"check.lint.fix": "biome lint --write .",
 		"check.types": "tsc --noEmit",
-    "clean": "turbo clean",
-    "dev": "turbo dev",
-    "dev.docs": "pnpm --filter docs dev",
-    "publish.all": "./scripts/publish-all.sh"
-  },
-  "peerDependencies": {
-    "typescript": "^5.0.0"
-  },
-  "dependencies": {
-    "@biomejs/biome": "1.8.3",
-    "@ianvs/prettier-plugin-sort-imports": "4.2.1",
-    "@types/eslint": "8.56.10",
-    "@typescript-eslint/eslint-plugin": "7.8.0",
-    "@typescript-eslint/parser": "7.8.0",
-    "eslint": "8.57.0",
-    "eslint-config-next": "14.2.3",
-    "madge": "7.0.0",
-    "prettier": "3.2.5",
-    "turbo": "1.13.3"
-  }
+		"clean": "turbo clean",
+		"dev": "turbo dev",
+		"dev.docs": "pnpm --filter docs dev",
+		"publish.all": "./scripts/publish-all.sh"
+	},
+	"peerDependencies": {
+		"typescript": "^5.0.0"
+	},
+	"dependencies": {
+		"@biomejs/biome": "1.8.3",
+		"@ianvs/prettier-plugin-sort-imports": "4.2.1",
+		"@types/eslint": "8.56.10",
+		"@typescript-eslint/eslint-plugin": "7.8.0",
+		"@typescript-eslint/parser": "7.8.0",
+		"eslint": "8.57.0",
+		"eslint-config-next": "14.2.3",
+		"madge": "7.0.0",
+		"prettier": "3.2.5",
+		"turbo": "1.13.3"
+	}
 }

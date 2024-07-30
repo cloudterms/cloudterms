@@ -1,20 +1,20 @@
 {
-  "name": "@cloudterms/js-sdk-example",
-  "module": "index.ts",
-  "type": "module",
-  "scripts": {
-    "clean": "rm -rf ./node_modules",
-    "start": "pnpm with-env tsx index.ts",
-    "with-env": "dotenv -e ../../.env -c --"
-  },
-  "dependencies": {
-    "@cloudterms/js": "workspace:*",
-    "dotenv-cli": "7.4.1"
-  },
-  "devDependencies": {
-    "@types/node": "latest"
-  },
-  "peerDependencies": {
-    "typescript": "^5.0.0"
-  }
+	"name": "@cloudterms/js-sdk-example",
+	"module": "index.ts",
+	"type": "module",
+	"scripts": {
+		"clean": "rm -rf ./node_modules",
+		"start": "pnpm with-env tsx index.ts",
+		"with-env": "dotenv -e ../../.env -c --"
+	},
+	"dependencies": {
+		"@cloudterms/js": "workspace:*",
+		"dotenv-cli": "7.4.1"
+	},
+	"devDependencies": {
+		"@types/node": "latest"
+	},
+	"peerDependencies": {
+		"typescript": "^5.0.0"
+	}
 }

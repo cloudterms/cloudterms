@@ -1,5 +1,5 @@
-import { NextResponse, type NextRequest } from 'next/server'
 import { CloudTerms } from '@cloudterms/react/server'
+import { type NextRequest, NextResponse } from 'next/server'
 
 type Context = {
   params: {
@@ -27,7 +27,7 @@ export const CloudTermsHandler = () => {
 
       return NextResponse.json(
         { error: 'CloudTerms route not found' },
-        { status: 404 }
+        { status: 404 },
       )
     },
 
@@ -42,7 +42,7 @@ export const CloudTermsHandler = () => {
 
       return NextResponse.json(
         { error: 'CloudTerms route not found' },
-        { status: 404 }
+        { status: 404 },
       )
     },
   }

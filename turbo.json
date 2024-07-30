@@ -1,21 +1,21 @@
 {
-  "$schema": "https://turbo.build/schema.json",
-  "pipeline": {
-    "build": {
-      "dependsOn": ["^build"],
-      "outputs": ["dist/**"]
-    },
-    "check.all": { "cache": false },
-    "check.circular-deps": { "cache": false },
-    "check.fmt": { "cache": false },
-    "check.fmt.fix": { "cache": false },
-    "check.lint": { "cache": false },
-    "check.lint.fix": { "cache": false },
-    "check.types": { "cache": false },
-    "clean": { "cache": false },
-    "dev": {
-      "cache": false,
-      "persistent": true
-    }
-  }
+	"$schema": "https://turbo.build/schema.json",
+	"pipeline": {
+		"build": {
+			"dependsOn": ["^build"],
+			"outputs": ["dist/**"]
+		},
+		"check.all": { "cache": false },
+		"check.circular-deps": { "cache": false },
+		"check.fmt": { "cache": false },
+		"check.fmt.fix": { "cache": false },
+		"check.lint": { "cache": false },
+		"check.lint.fix": { "cache": false },
+		"check.types": { "cache": false },
+		"clean": { "cache": false },
+		"dev": {
+			"cache": false,
+			"persistent": true
+		}
+	}
 }

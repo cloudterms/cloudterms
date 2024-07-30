@@ -1,5 +1,5 @@
-import { useEffect, useState } from 'react'
 import { CloudTermsClientProvider, type Terms } from '@cloudterms/react'
+import { useEffect, useState } from 'react'
 
 import '@cloudterms/react/index.css'
 
