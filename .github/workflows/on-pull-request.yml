@@ -1,0 +1,22 @@
+name: On Pull Request
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+    branches:
+      - develop
+
+jobs:
+  echo-event:
+    name: Echo GitHub
+    continue-on-error: true
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo $EVENT_JSON
+        env:
+          EVENT_JSON: ${{ toJson(github) }}
+
+  run-checks:
+    name: Run Checks
+    uses: ./.github/workflows/run-checks.yml
+    secrets: inherit

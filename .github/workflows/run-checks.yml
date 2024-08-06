@@ -1,0 +1,53 @@
+name: Run Checks
+
+on:
+  workflow_call:
+  workflow_dispatch:
+      
+jobs:
+  echo-event:
+    name: Echo GitHub
+    continue-on-error: true
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo $EVENT_JSON
+        env:
+          EVENT_JSON: ${{ toJson(github) }}
+
+  checks:
+    name: Checks
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout branch
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref }}
+
+      - name: Setup Node 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v3.0.0
+      - name: Get pnpm store directory
+        id: get-pnpm-store-path
+        shell: bash
+        run: |
+          echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_OUTPUT
+
+      - name: Setup pnpm cache
+        uses: actions/cache@v4
+        with:
+          path: ${{ steps.get-pnpm-store-path.outputs.STORE_PATH }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
+
+      - name: Install deps (with cache)
+        run: pnpm install
+
+      - name: Check all
+        run: pnpm check.all
+
+
