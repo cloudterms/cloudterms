@@ -61,7 +61,9 @@ export function TermsAgreementForm({
             render={() => (
               <FormItem>
                 <div className="mb-4">
-                  <FormLabel className="text-zinc-900">Agreements</FormLabel>
+                  <FormLabel className="text-zinc-900 text-xl">
+                    Agreements
+                  </FormLabel>
                   <FormDescription>
                     Select the terms you want to accept.
                   </FormDescription>
@@ -73,7 +75,7 @@ export function TermsAgreementForm({
                     name="terms"
                     render={({ field }) => {
                       return (
-                        <div className="flex flex-row terms-start space-x-3 mt-3">
+                        <div className="flex flex-row items-center space-x-3 mt-3">
                           <FormItem key={term.termId}>
                             <FormControl>
                               <Checkbox
