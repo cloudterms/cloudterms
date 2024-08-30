@@ -3,10 +3,10 @@
 	"type": "module",
 	"scripts": {
 		"build.app": "pnpm with-env tsc && vite build",
-		"clean": "rm -rf ./dist ./node_modules ./.turbo",
+		"check": "tsc --noEmit && biome check .",
+		"check.fix": "tsc --noEmit && biome check --write .",
 		"dev": "PORT=3001 pnpm with-env  vite",
 		"preview": "pnpm with-env vite preview",
-		"update-deps": "ncu -u && pnpm i",
 		"with-env": "dotenv -e ../../.env -c --"
 	},
 	"dependencies": {

@@ -1,62 +1,60 @@
 {
-  "name": "@cloudterms/nextjs",
-  "module": "./dist/es/index.js",
-  "type": "module",
-  "private": false,
-  "version": "0.0.22",
-  "scripts": {
-    "build": "bunchee",
-    "clean": "rm -rf ./dist ./node_modules ./.turbo && pnpm install",
-    "update-deps": "ncu -u && pnpm i"
-  },
-  "dependencies": {
-    "@cloudterms/react": "latest"
-  },
-  "devDependencies": {
-    "@types/node": "latest",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "bunchee": "5.3.1"
-  },
-  "peerDependencies": {
-    "next": "^14.0.0",
-    "typescript": "^5.0.0"
-  },
-  "files": [
-    "dist"
-  ],
-  "main": "./dist/es/index.js",
-  "types": "./dist/es/index.d.ts",
-  "exports": {
-    ".": {
-      "import": {
-        "types": "./dist/es/index.d.ts",
-        "default": "./dist/es/index.js"
-      },
-      "require": {
-        "types": "./dist/cjs/index.d.cts",
-        "default": "./dist/cjs/index.cjs"
-      }
-    },
-    "./client": {
-      "import": {
-        "types": "./dist/es/client.d.ts",
-        "default": "./dist/es/client.js"
-      },
-      "require": {
-        "types": "./dist/cjs/client.d.cts",
-        "default": "./dist/cjs/client.cjs"
-      }
-    },
-    "./server": {
-      "import": {
-        "types": "./dist/es/server.d.ts",
-        "default": "./dist/es/server.js"
-      },
-      "require": {
-        "types": "./dist/cjs/server.d.cts",
-        "default": "./dist/cjs/server.cjs"
-      }
-    }
-  }
+	"name": "@cloudterms/nextjs",
+	"module": "./dist/es/index.js",
+	"type": "module",
+	"private": false,
+	"version": "0.0.22",
+	"scripts": {
+		"build": "bunchee",
+		"check": "tsc --noEmit && biome check .",
+		"check.fix": "tsc --noEmit && biome check --write ."
+	},
+	"dependencies": {
+		"@cloudterms/react": "latest"
+	},
+	"devDependencies": {
+		"@types/node": "latest",
+		"@types/react": "^18",
+		"@types/react-dom": "^18",
+		"bunchee": "5.3.1"
+	},
+	"peerDependencies": {
+		"next": "^14.0.0",
+		"typescript": "^5.0.0"
+	},
+	"files": ["dist"],
+	"main": "./dist/es/index.js",
+	"types": "./dist/es/index.d.ts",
+	"exports": {
+		".": {
+			"import": {
+				"types": "./dist/es/index.d.ts",
+				"default": "./dist/es/index.js"
+			},
+			"require": {
+				"types": "./dist/cjs/index.d.cts",
+				"default": "./dist/cjs/index.cjs"
+			}
+		},
+		"./client": {
+			"import": {
+				"types": "./dist/es/client.d.ts",
+				"default": "./dist/es/client.js"
+			},
+			"require": {
+				"types": "./dist/cjs/client.d.cts",
+				"default": "./dist/cjs/client.cjs"
+			}
+		},
+		"./server": {
+			"import": {
+				"types": "./dist/es/server.d.ts",
+				"default": "./dist/es/server.js"
+			},
+			"require": {
+				"types": "./dist/cjs/server.d.cts",
+				"default": "./dist/cjs/server.cjs"
+			}
+		}
+	}
 }

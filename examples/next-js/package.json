@@ -3,10 +3,10 @@
 	"private": true,
 	"scripts": {
 		"build.app": "pnpm with-env next build",
-		"clean": "rm -rf ./.next ./node_modules ./.turbo",
+		"check": "tsc --noEmit && biome check .",
+		"check.fix": "tsc --noEmit && biome check --write .",
 		"dev": "PORT=3003 pnpm with-env next dev",
 		"start": "pnpm with-env next start",
-		"update-deps": "ncu -u && pnpm i",
 		"with-env": "dotenv -e ../../.env -c --"
 	},
 	"dependencies": {

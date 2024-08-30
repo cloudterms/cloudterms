@@ -3,28 +3,21 @@
 	"type": "module",
 	"scripts": {
 		"build": "turbo build",
-		"check.all": "pnpm check.types && biome check .",
-		"check.all.fix": "pnpm check.types && biome check --write .",
-		"check.circular-deps": "madge --circular --extensions ts,tsx .",
-		"check.fmt": "biome format .",
-		"check.fmt.fix": "biome format --write .",
-		"check.lint": "biome lint .",
-		"check.lint.fix": "biome lint --write .",
-		"check.types": "tsc --noEmit",
-		"clean": "turbo clean",
+		"check": "turbo check",
+		"check.fix": "turbo check.fix",
+		"clean": "./scripts/clean.sh",
 		"dev": "turbo dev",
 		"dev.docs": "pnpm --filter docs dev",
 		"publish.all": "./scripts/publish-all.sh",
-		"update-deps": "turbo update-deps",
-		"update-deps.root": "ncu -u && pnpm i"
+		"update-deps": "pnpm up --latest -r",
+		"update-deps.root": "ncu -u && pnpm i",
+		"update-package-json-versions": "./scripts/update-package-json-versions.sh"
 	},
 	"peerDependencies": {
 		"typescript": "^5.0.0"
 	},
 	"dependencies": {
 		"@biomejs/biome": "1.8.3",
-		"madge": "8.0.0",
-		"npm-check-updates": "17.0.3",
 		"turbo": "2.0.11"
 	},
 	"packageManager": "pnpm@9.3.0"

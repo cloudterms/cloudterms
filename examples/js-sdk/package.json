@@ -3,9 +3,9 @@
 	"module": "index.ts",
 	"type": "module",
 	"scripts": {
-		"clean": "rm -rf ./node_modules",
+		"check": "tsc --noEmit && biome check .",
+		"check.fix": "tsc --noEmit && biome check --write .",
 		"start": "pnpm with-env tsx index.ts",
-		"update-deps": "ncu -u && pnpm i",
 		"with-env": "dotenv -e ../../.env -c --"
 	},
 	"dependencies": {

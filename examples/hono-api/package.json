@@ -2,9 +2,9 @@
 	"name": "@cloudterms/hono-api-example",
 	"type": "module",
 	"scripts": {
-		"clean": "rm -rf dist",
+		"check": "tsc --noEmit && biome check .",
+		"check.fix": "tsc --noEmit && biome check --write .",
 		"dev": "PORT=3002 pnpm with-env tsx watch src/index.ts",
-		"update-deps": "ncu -u && pnpm i",
 		"with-env": "dotenv -e ../../.env -c --"
 	},
 	"dependencies": {
