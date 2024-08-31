@@ -1,0 +1,75 @@
+# Rest API
+> New API docs coming soon!
+
+The CloudTerms REST API allows you to interact with your applications terms and users. This API is useful for integrating CloudTerms into your backend services or custom applications.
+
+## Base URL
+
+
+```http
+https://api.cloudterms.dev
+```
+
+## Authentication
+
+To authenticate with the CloudTerms API, you need to provide your application ID and secret in the `Authorization` header. We use basic authentication with the application ID as the username and the secret as the password.
+
+```http
+Basic <CLOUDTERMS_APP_ID>:<CLOUDTERMS_APP_SECRET>
+```
+
+## Endpoints
+
+### `/api/v1`
+
+#### `GET /terms`
+
+Get all your applications terms
+
+**Response:**
+
+```typescript
+{
+  data: [
+    {
+      id: number
+      applicationId: string // Your application ID
+      name: string // Name of the term
+      userId: string // Unique user ID provided by your application
+      orgId: string | null // Your organization ID in CloudTerms, if applicable
+      termId: string
+      content: string // HTML content of the term
+      createdAt: Date
+      updatedAt: Date
+    }
+  ]
+}
+```
+
+#### `GET /users/:userId/has-agreed`
+
+Check if a user has agreed to all terms
+
+**Response:**
+
+```typescript
+{
+  data: boolean
+}
+```
+
+#### `POST /users/:userId/agree`
+
+Set that a user has agreed to all terms
+
+**Response:**
+
+```typescript
+{
+  data: {
+    userId: string
+    lastAgreedAt: Date
+    applicationId: string
+  }
+}
+```
