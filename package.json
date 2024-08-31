@@ -9,7 +9,7 @@
 		"dev": "turbo dev",
 		"dev.docs": "pnpm --filter docs dev",
 		"publish.all": "./scripts/publish-all.sh",
-		"update-deps": "pnpm up --latest -r",
+		"update-deps": "pnpm up --latest -r '!@cloudterms/js' '!@cloudterms/react'",
 		"update-package-json-versions": "./scripts/update-package-json-versions.sh"
 	},
 	"peerDependencies": {
