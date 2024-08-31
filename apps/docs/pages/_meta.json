@@ -1,7 +1,7 @@
 {
 	"index": "Home",
-	"rest-api": "REST API",
 	"sdks": "SDK References",
+	"rest-api": "REST API",
 	"dashboard": {
 		"title": "Dashboard ↗",
 		"type": "page",
