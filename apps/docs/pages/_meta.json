@@ -1,11 +1,11 @@
 {
 	"index": "Home",
 	"sdks": "SDK References",
+	"rest-api": "REST API",
 	"dashboard": {
 		"title": "Dashboard ↗",
 		"type": "page",
 		"href": "https://cloudterms.dev/dashboard",
 		"newWindow": true
-	},
-	"rest-api": "REST API"
+	}
 }
