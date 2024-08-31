@@ -6,5 +6,6 @@
 		"type": "page",
 		"href": "https://cloudterms.dev/dashboard",
 		"newWindow": true
-	}
+	},
+	"rest-api": "REST API"
 }
