@@ -10,14 +10,11 @@ fi
 VERSION=$1
 ./scripts/update-package-json-versions.sh $VERSION
 
-# Build all packages
 pnpm --filter js build
-pnpm --filter react build
-pnpm --filter nextjs build
-
-# Publish all packages
-# TODO: figure out why this is throwing 413
-# pnpm publish -r --access public --no-git-checks
 pnpm --filter js publish --access public --no-git-checks
+
+pnpm --filter react build
 pnpm --filter react publish --access public --no-git-checks
+
+pnpm --filter nextjs build
 pnpm --filter nextjs publish --access public --no-git-checks

@@ -10,7 +10,6 @@
 		"dev.docs": "pnpm --filter docs dev",
 		"publish.all": "./scripts/publish-all.sh",
 		"update-deps": "pnpm up --latest -r",
-		"update-deps.root": "ncu -u && pnpm i",
 		"update-package-json-versions": "./scripts/update-package-json-versions.sh"
 	},
 	"peerDependencies": {
@@ -18,7 +17,7 @@
 	},
 	"dependencies": {
 		"@biomejs/biome": "1.8.3",
-		"turbo": "2.0.11"
+		"turbo": "2.1.1"
 	},
 	"packageManager": "pnpm@9.3.0"
 }

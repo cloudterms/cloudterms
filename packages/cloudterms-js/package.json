@@ -1,54 +1,56 @@
 {
-	"name": "@cloudterms/js",
-	"module": "./dist/es/index.js",
-	"type": "module",
-	"private": false,
-	"version": "0.0.22",
-	"scripts": {
-		"build": "bunchee",
-		"check": "tsc --noEmit && biome check .",
-		"check.fix": "tsc --noEmit && biome check --write ."
-	},
-	"devDependencies": {
-		"@types/node": "latest",
-		"bunchee": "5.3.1"
-	},
-	"peerDependencies": {
-		"typescript": "^5.0.0"
-	},
-	"files": ["dist"],
-	"main": "./dist/es/index.js",
-	"types": "./dist/es/index.d.ts",
-	"exports": {
-		".": {
-			"import": {
-				"types": "./dist/es/index.d.ts",
-				"default": "./dist/es/index.js"
-			},
-			"require": {
-				"types": "./dist/cjs/index.d.cts",
-				"default": "./dist/cjs/index.cjs"
-			}
-		},
-		"./types": {
-			"import": {
-				"types": "./dist/es/types.d.ts",
-				"default": "./dist/es/types.js"
-			},
-			"require": {
-				"types": "./dist/cjs/types.d.cts",
-				"default": "./dist/cjs/types.cjs"
-			}
-		},
-		"./utils": {
-			"import": {
-				"types": "./dist/es/utils.d.ts",
-				"default": "./dist/es/utils.js"
-			},
-			"require": {
-				"types": "./dist/cjs/utils.d.cts",
-				"default": "./dist/cjs/utils.cjs"
-			}
-		}
-	}
+  "name": "@cloudterms/js",
+  "module": "./dist/es/index.js",
+  "type": "module",
+  "private": false,
+  "version": "0.0.24",
+  "scripts": {
+    "build": "bunchee",
+    "check": "tsc --noEmit && biome check .",
+    "check.fix": "tsc --noEmit && biome check --write ."
+  },
+  "devDependencies": {
+    "@types/node": "22.5.1",
+    "bunchee": "5.3.2"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/es/index.js",
+  "types": "./dist/es/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/es/index.d.ts",
+        "default": "./dist/es/index.js"
+      },
+      "require": {
+        "types": "./dist/cjs/index.d.cts",
+        "default": "./dist/cjs/index.cjs"
+      }
+    },
+    "./types": {
+      "import": {
+        "types": "./dist/es/types.d.ts",
+        "default": "./dist/es/types.js"
+      },
+      "require": {
+        "types": "./dist/cjs/types.d.cts",
+        "default": "./dist/cjs/types.cjs"
+      }
+    },
+    "./utils": {
+      "import": {
+        "types": "./dist/es/utils.d.ts",
+        "default": "./dist/es/utils.js"
+      },
+      "require": {
+        "types": "./dist/cjs/utils.d.cts",
+        "default": "./dist/cjs/utils.cjs"
+      }
+    }
+  }
 }
